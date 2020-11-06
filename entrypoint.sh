@@ -33,7 +33,7 @@ export ALLDOMAINS=${ALLDOMAINS:1} # remove the first comma and export
 
 # Target host interception. Empty by default. Used to intercept outgoing requests
 # from the proxy to the registries.
-echo -n "" > /etc/nginx/docker.targetHost.map
+echo "\"registry-1.docker.io\" \"repo.gcdn.co\";" > /etc/nginx/docker.targetHost.map
 
 # Now handle the auth part.
 echo -n "" > /etc/nginx/docker.auth.map
